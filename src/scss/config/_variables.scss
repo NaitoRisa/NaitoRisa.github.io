@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+/*---------------------------------------------------------------------------------------------------------------------
+	1. Module
+---------------------------------------------------------------------------------------------------------------------*/
+
+//img
+$imgPath:"../assets/images/";
+
+//border-radius
+@mixin radius{
+  border-radius: 2px;
+}
+
+@mixin secP{
+  padding: 32px 24px;
+   @include md {
+      padding: 64px 24px;
+   }
+}
+
+@mixin maxW{
+  max-width: 680px;
+}
+
+//SP横幅一括
+@mixin sp96{
+  width: 96%;
+  margin: auto;
+}
+
+//card
+@mixin card($bgcolor: $white,){
+  display: block;
+  width: 85%;
+  max-width: 400px;
+  padding: 48px;
+  @include radius;
+  background-color: $bgcolor;
+  box-sizing: border-box;
+
+  @include mq(sp) {
+    padding: 32px;
+  }
+}
+
+//inView
+@mixin inView{
+  opacity: 0;
+  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+//shadow
+.shadow, .shadowButton {
+    box-shadow: 0 8px 16px rgba(0,0,0,.12);
+}
+
+/*---------------------------------------------------------------------------------------------------------------------
+	2. Mixin
+---------------------------------------------------------------------------------------------------------------------*/
+
+/*	1.1 テキスト系
+---------------------------------------------------------------------------------------------------------------------*/
+
+//複数行に下線を引く
+@mixin line($color: $underline, $height: 65%){
+  background: linear-gradient(transparent $height, $color 0%);
+  display: inline;
+}
+
+@mixin grid-layout {
+  display: grid;
+  display: -ms-grid;
+}
+// grid-template-column（列）の幅の指定
+// 最大で4 × 4のグリッドを想定しています 最大4列
+@mixin grid-layout-column($cell1, $cell2, $cell3:0, $cell4:0) {
+  @if $cell3 == null and $cell4 == null {
+    grid-template-columns: $cell1 $cell2;
+    -ms-grid-columns: $cell1 $cell2;
+  }
+  @else if $cell4 == null {
+    grid-template-columns: $cell1 $cell2 $cell3;
+    -ms-grid-columns: $cell1 $cell2 $cell3;
+  }
+  @else {
+    grid-template-columns: $cell1 $cell2 $cell3 $cell4;
+    -ms-grid-columns: $cell1 $cell2 $cell3 $cell4;
+  }
+}
+// grid-template-row（行）の幅の指定
+// 最大で4 × 4のグリッドを想定しています 最大4行
+@mixin grid-layout-row( $cell1, $cell2, $cell3:0, $cell4:0) {
+  @if $cell3 == null and $cell4 == null {
+    grid-template-rows:  $cell1 $cell2;
+    -ms-grid-rows: $cell1 $cell2;
+  }
+  @else if $cell4 == null {
+    grid-template-rows:  $cell1 $cell2 $cell3;
+    -ms-grid-rows: $cell1 $cell2 $cell3;
+  }
+  @else {
+    grid-template-rows:  $cell1 $cell2 $cell3 $cell4;
+    -ms-grid-rows: $cell1 $cell2 $cell3 $cell4;
+  }
+}
+// grid-column（列）の位置の指定
+@mixin grid-column($start, $end) {
+  grid-column: $start #{'/'} $end;
+  -ms-grid-column: $start;
+  -ms-grid-column-span: $end - $start;
+}
+// grid-row（行）の位置の指定
+@mixin grid-row($start, $end) {
+  grid-row: $start #{'/'} $end;
+  -ms-grid-row: $start;
+  -ms-grid-row-span: $end - $start;
+}
+
+//justify : 両端揃えの設定
+@mixin justify(){
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+//天地左右
+@mixin center($direction) {//天地左右
+	position: absolute;
+	@if $direction==xy {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	@else if $direction==x {//左寄せ
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@else if $direction==y {//右寄せ
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+//天地左右flex
+@mixin centerF{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//テキストを折り返さない
+@mixin truncate($width){
+  width: $width;
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+//文字が溢れた際の表示を … にする（複数行対応, Chrome/Safariのみ）
+@mixin line-truncate(){
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//リンクカラーの生成
+@mixin linåk-color($color) {
+ 	color: $color;
+ 	&:hover, &:active, &:focus {
+		color: lighten($color, 20%);
+	}
+}
+
+//link hover
+@mixin hover($flag: true){
+  @include min-screen(900px){
+    transition: .2s;
+    &:hover{
+       transition: .3s;
+       @if $flag == true{
+         opacity: .5;
+       }
+       @content;
+    }
+  }
+}
+// 一部のリンクで違う動きをつけたいとき
+// @include hover{
+//   // ここに動きのスタイルを記述
+// }
+// デフォルトのままでok
+// @include hover(false){
+//   // ここに動きのスタイルを記述
+// }
+
+
+//カウンター
+@mixin counter($numName, $beforeText, $afterText) {
+    content: "#{$beforeText}" counter(num_ + $numName) "#{$afterText}";
+    counter-increment: num_ + $numName;
+}
+
+//clearfix
+  @mixin clearfix {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+/*	1.2 背景系
+---------------------------------------------------------------------------------------------------------------------*/
+
+//グラデーション
+@mixin gradient($startColor, $endColor, $orientation: ttob) {
+	background: $startColor;
+	@if $orientation == ttob {
+		background: -webkit-linear-gradient(top, #{$startColor} 0%, #{$endColor} 100%);
+		background: linear-gradient(to bottom, #{$startColor} 0%,  #{$endColor} 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr=' #{$endColor}', GradientType=0);
+	} @else if $orientation == ltor {
+		background: -webkit-linear-gradient(right, #{$startColor} 0%, #{$endColor} 100%);
+    background: linear-gradient(to right, #{$startColor} 0%,  #{$endColor} 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr=' #{$endColor}', GradientType=1);
+	}
+}
+
+//背景画像
+@mixin background-image($fileName) {
+	background-image: url($imgPath + $fileName);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	@content;
+}
+
+//ブロックの縦横比を設定
+// 第１引数：（必須）幅
+// 第２引数：（必須）高さ
+// 第３引数：背景画像を指定する際のみ画像へのパス
+@mixin aspect-ratio($width, $height, $image_path: null) {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: ($height / $width) * 100%;
+  @if $image_path != null {
+    background: url($image_path) 50% 50% no-repeat;
+    background-size: cover;
+  }
+}
+
+//ウィンドウ幅のブロックを作る
+@mixin full-width(){
+  margin-left: calc((100vw - 100%) / -2);
+  margin-right: calc((100vw - 100%) / -2);
+  max-width: auto;    // IE対策
+  max-width: initial;
+}
+
+/*	1.3 アイコン・図形生成系
+---------------------------------------------------------------------------------------------------------------------*/
+//擬似要素でアイコン
+@mixin icon($fileName, $width, $height) {
+	background: url($path_img + $fileName) no-repeat 50% 50%;
+	background-size: $width $height;
+	width: $width;
+	height: $height;
+}
+
+//三角形を作る
+@mixin triangle($direction, $width, $height, $color){
+	width: 0;
+	height: 0;
+	border-style: solid;
+	$valWidth: $width / 2;
+	$valHeight: $height / 2;
+	@if ($direction == top) {
+		border-width: 0 $valWidth $height $valWidth;
+		border-color: transparent transparent $color transparent;
+	} @else if ($direction == left) {
+		border-width: $valHeight $width $valHeight 0;
+		border-color: transparent $color transparent transparent;
+	} @else if ($direction == right) {
+		border-width: $valHeight 0 $valHeight $width;
+		border-color: transparent transparent transparent $color;
+	} @else if ($direction == bottom) {
+		border-width: $height $valWidth 0 $valWidth;
+		border-color: $color transparent transparent transparent;
+	}
+}
