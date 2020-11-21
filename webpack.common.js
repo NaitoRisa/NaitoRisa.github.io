@@ -57,9 +57,5 @@ module.exports = {
       template: path.resolve(__dirname, 'src' , 'html', 'index.html'), // パスの指定
       filename: 'index.html'  // dist/html/以下にindex.htmlをビルド
     }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src' , 'html', 'about', 'index.html'), // パスの指定
-      filename: 'about/index.html'  // dist/html/about以下にindex.htmlをビルド
-    }),
   ]
 };
