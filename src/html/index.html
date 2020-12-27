@@ -9,16 +9,32 @@
 </head>
 <body>
   <%= require('html-loader!./common/header.html') %>
-  <div class="main">
-    <a href="./" class="main_contents">
-      <img src="/src/images/about_main.png" width="900" height="300" alt="" />
+  <section class="main">
+    <p class="main_title"><img src="/src/images/about/about_title.png" width="616" height="229" alt="My Works" /></p>
+    <div class="main_contents">
+      <a href="./" class="main_visual">
+        <img src="/src/images/about/about_main.png" width="1575" height="721" alt="" />
+      </a>
+      <div class="main_sub">
+        <a href="./" class="">
+          <img src="/src/images/about/about_card.png" width="504" height="480" alt="" />
+        </a>
+        <a href="./" class="">
+          <img src="/src/images/about/about_sauna.png" width="1041" height="479" alt="" />
+        </a>
+      </div>
+      <div class="main_sub">
+        <a href="./" class="">
+          <img src="/src/images/about/about_onigiri.png" width="1041" height="481" alt="" />
+        </a>
+        <a href="./" class="">
+          <img src="/src/images/about/about_goodmorning.png" width="505" height="481" alt="" />
+        </a>
+      </div>
+    </div>
+    <a href="./" class="instagram">
+      <img src="/src/images/about/about_instagram.png" width="68" height="68.5" alt="" />
     </a>
-    <a href="./" class="main_contents">
-      <img>2番目画像①</img>
-    </a>
-    <a href="./" class="main_contents">
-      <img>2番目画像②</img>
-    </a>
-  </div>
+  </section>
 </body>
 </html>
