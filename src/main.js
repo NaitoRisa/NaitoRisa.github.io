@@ -10,3 +10,5 @@ import './images/about/about_onigiri.png';
 import './images/about/about_goodmorning.png';
 import './images/about/about_copy.png';
 import './images/about/about_instagram.png';
+// Profileページ画像
+import './images/profile/profile_main.png';

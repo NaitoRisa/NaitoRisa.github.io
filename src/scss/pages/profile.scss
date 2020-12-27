@@ -1,0 +1,43 @@
+.profile{
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px 180px;
+  color: $text200;
+  font-size: $fontSizeBase;
+  letter-spacing: 1.4px;
+
+  &_photo{
+
+    >img{
+      width: 350px;
+      height: auto;
+    }
+  }
+
+  &_box{
+    margin-left: 60px;
+
+    &_name{
+      font-weight: bold;
+      font-size: 3rem;
+    }
+  
+    &_comment{
+      font-size: 1.8rem;
+      padding-bottom: 20px;
+    }
+  }
+
+  &_career{
+    padding-left: 160px;
+
+    &_contents{
+      display: flex;
+      padding-bottom: 10px;
+      
+      &.date{
+        padding-right: 30px;
+      }
+    }
+  }
+}
