@@ -47,7 +47,7 @@ module.exports = {
         test: /\.(png|svg|jpe?g|gif)$/,
         use: [
             {
-                loader: "file-loader", 
+                loader: "file-loader",
                 options: {
                 name: '[path][name].[ext]',
                 publicPath: "/assets/images",
@@ -69,6 +69,34 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src' , 'html', 'index.html'), // パスの指定
       filename: 'index.html'  // dist/html/以下にindex.htmlをビルド
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src' , 'html', 'Links', 'index.html'),
+      filename: 'Links/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src' , 'html', 'News', 'index.html'),
+      filename: 'News/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src' , 'html', 'News', 'indexDetail.html'),
+      filename: 'News/indexDetail.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src' , 'html', 'Profile', 'index.html'),
+      filename: 'Profile/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src' , 'html', 'Top', 'index.html'),
+      filename: 'Top/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src' , 'html', 'Works', 'index.html'),
+      filename: 'Works/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src' , 'html', 'Works', 'indexDetail.html'),
+      filename: 'Works/indexDetail.html',
     }),
   ]
 };
