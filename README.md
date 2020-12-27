@@ -55,5 +55,5 @@ http://localhost:8080 でページが開けます。
 -  `git commit` まではDev-Container上で可能ですが、pushはローカルのコンソールから実施いただければと思います。  
 
 ###各ページの確認方法  
-'http://localhost:8080/Profile/' -> Profile/index.html
-'http://localhost:8080/News/indexDetail.html' -> News/indexDetail.html
+'http://localhost:8080/Profile/' -> Profile/index.html  
+'http://localhost:8080/News/indexDetail.html' -> News/indexDetail.html  
