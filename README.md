@@ -52,4 +52,8 @@ http://localhost:8080 でページが開けます。
 ※ cssファイルは一つのstyle.cssで出力されるようになってます。もし分けたいなどのモチベーションあれば @fussy113 まで
 
 ### 注意点
--  `git commit` まではDev-Container上で可能ですが、pushはローカルのコンソールから実施いただければと思います。
+-  `git commit` まではDev-Container上で可能ですが、pushはローカルのコンソールから実施いただければと思います。  
+
+###各ページの確認方法  
+'http://localhost:8080/Profile/' -> Profile/index.html
+'http://localhost:8080/News/indexDetail.html' -> News/indexDetail.html
