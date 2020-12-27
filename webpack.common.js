@@ -42,6 +42,19 @@ module.exports = {
           },
         ]
       },
+      {
+         // ここで画像を読み込む
+        test: /\.(png|svg|jpe?g|gif)$/,
+        use: [
+            {
+                loader: "file-loader", 
+                options: {
+                name: '[path][name].[ext]',
+                publicPath: "/assets/images",
+                }
+            }
+         ]
+      },
     ]
   },
   // ここまで変更不要
