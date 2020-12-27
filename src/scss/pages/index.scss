@@ -3,9 +3,9 @@
   padding-bottom: 100px;
 
   &_contents{
+    display: block;
     margin: 0 auto;
     text-align: center;
-    padding: 0 14%;
 
     //imageが読み込まれていない &いる？
     &::after{
@@ -29,6 +29,6 @@
 }
 
 .instagram{
-  padding: 0 14%;
-  margin-left: 10px;
+  //無理やりすぎてるので直したい
+  margin-left: -1490px;
 }
