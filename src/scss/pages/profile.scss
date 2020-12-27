@@ -29,11 +29,11 @@
   }
 
   &_career{
-    padding-left: 160px;
+    padding-left: 30px;
+    display: inline-block;
 
     &_contents{
       display: flex;
-      padding-bottom: 10px;
       
       &.date{
         padding-right: 30px;
