@@ -1,0 +1,23 @@
+.nav{
+  &_all{
+    display: flex;
+    padding: 30px 0;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &_left{
+    padding-left: 20px;
+  }
+
+  &_right{
+    margin-left: auto;
+    padding-right: 20px;
+
+    >a{
+      padding-right: 25px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: $text200;
+    }
+  }
+}

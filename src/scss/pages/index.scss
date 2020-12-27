@@ -1,0 +1,34 @@
+.main{
+  color: $text200;
+  padding-bottom: 100px;
+
+  &_contents{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    //imageが読み込まれていない &いる？
+    &::after{
+      background-image: url(/src/images/about/about_copy.png);
+    }
+
+    &_sub{
+      display: flex;
+    }
+  }
+
+  &_title{
+    text-align: left;
+    padding-top: 25px;
+
+    >img{
+      width: 400px;
+      height: auto;
+    }
+  }
+}
+
+.instagram{
+  //無理やりすぎてるので直したい
+  margin-left: -1490px;
+}
