@@ -71,6 +71,10 @@ module.exports = {
       filename: 'index.html'  // dist/html/以下にindex.htmlをビルド
     }),
     new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src' , 'html', 'footer.html'), 
+      filename: 'footer.html'
+    }),
+    new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src' , 'html', 'Links', 'index.html'),
       filename: 'Links/index.html',
     }),
