@@ -12,3 +12,10 @@ import './images/about/about_copy.png';
 import './images/about/about_instagram.png';
 // Profileページ画像
 import './images/profile/profile_main.png';
+// Worksページ画像
+import './images/works/works_title.png';
+import './images/works/works_detail1.jpg';
+import './images/works/works_detail2.jpg';
+import './images/works/works_detail3.jpg';
+// Newsページ画像
+import './images/news/news_title.png';

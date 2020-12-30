@@ -1,0 +1,42 @@
+.works{
+
+  &_wrap{
+    position: relative;
+    width: 980px;
+    margin: auto;
+  }
+
+
+  &_title{
+    padding-top: 50px;
+    position: absolute;
+    top: 10px;
+
+    &_text{
+      >img{
+        width: 40%;
+        height: auto;
+      }
+    }
+  }
+
+  &_detail{
+    display: flex;
+    flex-wrap: wrap;
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 180px;
+
+
+    &_visual{
+      display: block;
+      padding: 0 30px 30px 0;
+
+      >img{
+        width: 280px;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}

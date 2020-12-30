@@ -25,3 +25,16 @@
     }
   }
 }
+
+.footer{
+  background-color: $footerColor;
+  padding: 20px;
+
+  &_copy{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: $text200;
+    font-weight: bold;
+  }
+}
