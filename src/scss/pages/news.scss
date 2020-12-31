@@ -1,0 +1,40 @@
+.news{
+  color: $text200;
+
+    &_wrap{
+      position: relative;
+      width: 980px;
+      margin: auto;
+    }
+  
+  
+    &_title{
+      padding-top: 50px;
+      position: absolute;
+      top: 10px;
+  
+      &_text{
+        >img{
+          width: 40%;
+          height: auto;
+        }
+      }
+    }
+  
+    &_detail{
+      width: 980px;
+      padding-top: 250px;
+
+      &_contents{
+        background-color: $gray400;
+        display: clear;
+
+        &.link{
+          font-size: 1.3rem;
+          color: $text200;
+
+        }
+
+      }
+    }
+  }
