@@ -19,3 +19,5 @@ import './images/works/works_detail2.jpg';
 import './images/works/works_detail3.jpg';
 // Newsページ画像
 import './images/news/news_title.png';
+// Linksページ画像
+import './images/links/links_title.png';
