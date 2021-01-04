@@ -16,9 +16,8 @@
     display: block;
     margin: 0 auto;
     text-align: center;
-    padding-top: 160px;
+    padding-top: 180px;
 
-    //imageが読み込まれていない &いる？
     &::after{
       background-image: url(/src/images/about/about_copy.png);
     }
@@ -27,6 +26,7 @@
   &_sub{
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 
     >a{
       padding-top: 10px;
@@ -82,8 +82,7 @@
 }
 
 .instagram{
-  //無理やりすぎてるので直したい
-  margin-left: -1490px;
+  margin-left: -1138px;
 }
 
 .footer{
