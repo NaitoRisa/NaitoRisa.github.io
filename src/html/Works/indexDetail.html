@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Document</title>
+  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+</head>
+<body>
+  <%= require('html-loader!../common/header.html') %>
+  <div class="workDetail_wrap">
+    <div class="workDetail_detail">
+      <div class="workDetail_detail_contents">
+        <p class="workDetail_detail_title">
+          <small>Graphic Design</small>
+          タイトルタイトルタイトル
+        </p>
+        <p class="workDetail_detail_text">
+          作品の説明が入ります作品の説明が入ります作品の説明が入ります
+          作品の説明が入ります作品の説明が入ります作品の説明が入ります
+          作品の説明が入ります作品の説明が入ります作品の説明が入ります
+          作品の説明が入ります作品の説明が入ります作品の説明が入ります
+          作品の説明が入ります作品の説明が入ります作品の説明が入ります。
+        </p>
+      </div>
+      <div class="workDetail_detail_season">
+        <p class="workDetail_detail_season years">2018</p>
+        <p class="workDetail_detail_season cl">CL：XXXXXXX</p>
+        <p class="workDetail_detail_season cl">作業時間：XXXXXXX</p>
+      </div>
+    </div>
+    <div class="workDetail_image">
+      <figure class="workDetail_image_contents">
+        <img src="/src/images/worksdetail/worksdetail_image1.jpg" width="2160" height="1510" alt="News" />
+      </figure class="workDetail_image_contents">
+      <figure class="workDetail_image_contents">
+        <img src="/src/images/worksdetail/worksdetail_image2.jpg" width="2160" height="2358" alt="News" />
+      </figure>
+      <figure class="workDetail_image_contents">
+        <img src="/src/images/worksdetail/worksdetail_image3.jpg" width="2160" height="1510" alt="News" />
+      </figure>
+    </div>
+    <a href="./" class="workDetail_link">
+      Back
+    </a>
+  </div>
+</body>
+<%= require('html-loader!../common/footer.html') %>
+</html>

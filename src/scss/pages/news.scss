@@ -1,5 +1,7 @@
 .news{
   color: $text200;
+  font-size: 1.5rem;
+  font-weight: bold;
 
     &_wrap{
       position: relative;
@@ -19,7 +21,7 @@
         }
       }
     }
-  
+
     &_detail{
       width: 980px;
       padding: 250px 0 100px;
@@ -29,13 +31,11 @@
         flex-direction: column;
         background-color: $gray400;
         line-height: 50px;
+        padding: 30px 50px;
+      }
 
-        &.link{
-          font-size: 1.7rem;
-          color: $text200;
-
-        }
-
+      &_link{
+        color: $text200;
       }
     }
   }

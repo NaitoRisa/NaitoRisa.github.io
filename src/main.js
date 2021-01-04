@@ -17,7 +17,15 @@ import './images/works/works_title.png';
 import './images/works/works_detail1.jpg';
 import './images/works/works_detail2.jpg';
 import './images/works/works_detail3.jpg';
+// Worksdetailページ画像
+import './images/worksdetail/worksdetail_image1.jpg';
+import './images/worksdetail/worksdetail_image2.jpg';
+import './images/worksdetail/worksdetail_image3.jpg';
 // Newsページ画像
 import './images/news/news_title.png';
+import './images/news/image_gray.jpg';
 // Linksページ画像
 import './images/links/links_title.png';
+import './images/links/links_image_1.jpg';
+import './images/links/links_image_2.jpg';
+

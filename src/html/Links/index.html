@@ -9,25 +9,46 @@
 </head>
 <body>
   <%= require('html-loader!../common/header.html') %>
-  <main class="news">
-    <div class="news_wrap">
-      <h1 class="news_title">
-        <p class="news_title_text"><img src="src/images/links/links_title.png" width="616" height="229" alt="Links" /></p>
+  <main class="links">
+    <div class="links_wrap">
+      <h1 class="links_title">
+        <p class="links_title_text"><img src="src/images/links/links_title.png" width="616" height="229" alt="Links" /></p>
       </h1>
-      <div class="news_detail">
-        <div class="news_detail_contents">
-          <a href="./" class="news_detail_contents link">
-           タイトルタイトルタイトルタイトルタイトルタイトルタイトル
-          </a>
-          <a href="./" class="news_detail_contents link">
-            タイトルタイトルタイトルタイトルタイトルタイトルタイトル
-          </a>
+      <div class="links_detail">
+        <div class="links_detail_contents">
+          <p class="links_name">@rq_gram</p>
+          <ul class="links_id">
+            <li class="links_text">
+              <a href="./" class="news_detail_link">
+                Twitter： @XXXXXXXXX
+               </a>
+            </li>
+            <li class="links_text">
+              <a href="./" class="news_detail_link">
+                Instagram： @XXXXXXXXX
+               </a>
+               <figure class="links_image">
+                <img src="src/images/links/links_image_1.jpg" width="874" height="273" alt="" />
+              </figure>
+            </li>
+          </ul>
+        </div>
+        <div class="links_detail_contents">
+          <p class="links_name"><small>Fashion Brand</small><br>@rq_gram</p>
+          <ul class="links_id">
+            <li class="links_text">
+              <a href="./" class="news_detail_link">
+                Instagram： @XXXXXXXXX
+               </a>
+               <figure class="links_image">
+                <img src="src/images/links/links_image_2.jpg" width="874" height="393" alt="" />
+              </figure>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </main>
-
 </body>
 <%= require('html-loader!../common/footer.html') %>
-<!--ここにfooterを入れる-->
 </html>
