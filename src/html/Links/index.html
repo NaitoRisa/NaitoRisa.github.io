@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <title>Document</title>
-    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <%= require('html-loader!../common/head.html') %>
+  <title>Links | Lisq's portfolio</title>
 </head>
 <body>
   <%= require('html-loader!../common/header.html') %>
   <main class="links">
     <div class="links_wrap">
       <h1 class="links_title">
-        <p class="links_title_text"><img src="/src/images/links/links_title.png" width="616" height="229" alt="Links" /></p>
+        <img src="/src/images/links/links_title.png" width="616" height="229" alt="Links" />
       </h1>
-      <div class="links_detail">
-        <div class="links_detail_contents">
-          <p class="links_name">Lisq</p>
+      <section class="links_detail">
+        <section class="links_detail_contents">
+          <h2 class="links_name">Lisq</h2>
           <ul class="links_id">
             <li class="links_text">
-              <a href="https://twitter.com/lisxqx" class="news_detail_link">
+              <a href="https://twitter.com/lisxqx" class="news_detail_link" target="_blank" rel="noopener noreferrer">
                 Twitter： @lisxqx
                </a>
             </li>
             <li class="links_text">
-              <a href="https://www.instagram.com/rq_gram/" class="news_detail_link">
+              <a href="https://www.instagram.com/rq_gram/" class="news_detail_link" target="_blank" rel="noopener noreferrer">
                 Instagram： @rq_gram
                </a>
                <figure class="links_image">
@@ -32,12 +29,12 @@
               </figure>
             </li>
           </ul>
-        </div>
+        </section>
         <div class="links_detail_contents">
-          <p class="links_name"><small>Fashion Brand</small><br>@rq_gram</p>
+          <h2 class="links_name"><small>Fashion Brand</small><br>@rq_gram</h2>
           <ul class="links_id">
             <li class="links_text">
-              <a href="https://www.instagram.com/oyu_sauna/" class="news_detail_link">
+              <a href="https://www.instagram.com/oyu_sauna/" class="news_detail_link" target="_blank" rel="noopener noreferrer">
                 Instagram： @oyu_sauna
                </a>
                <figure class="links_image">
@@ -46,9 +43,9 @@
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </div>
   </main>
+  <%= require('html-loader!../common/footer.html') %>
 </body>
-<%= require('html-loader!../common/footer.html') %>
 </html>

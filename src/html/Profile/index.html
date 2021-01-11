@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <title>Document</title>
-    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <%= require('html-loader!../common/head.html') %>
+  <title>Profile | Lisq's portfolio</title>
 </head>
 <body>
   <%= require('html-loader!../common/header.html') %>
-  <section class="profile">
+  <div class="profile">
     <figure class="profile_photo">
       <img src="/src/images/profile/profile_main.png" width="300" height="300" alt="" />
     </figure>
@@ -55,7 +52,7 @@
         <p class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</p>
       </div>
     </div>
-  </section>
+  </div>
+  <%= require('html-loader!../common/footer.html') %>
 </body>
-<%= require('html-loader!../common/footer.html') %>
 </html>

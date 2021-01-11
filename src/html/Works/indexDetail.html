@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-  <title>Document</title>
-  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <%= require('html-loader!../common/head.html') %>
+  <title>WorksDetail | Lisq's portfolio</title>
 </head>
 <body>
   <%= require('html-loader!../common/header.html') %>
   <div class="workDetail_wrap">
-    <div class="workDetail_detail">
+    <article class="workDetail_detail">
       <div class="workDetail_detail_contents">
         <p class="workDetail_detail_title">
           <small>Graphic Design</small>
@@ -29,11 +26,11 @@
         <p class="workDetail_detail_season cl">CL：XXXXXXX</p>
         <p class="workDetail_detail_season cl">作業時間：XXXXXXX</p>
       </div>
-    </div>
+    </article>
     <div class="workDetail_image">
       <figure class="workDetail_image_contents">
         <img src="/src/images/worksdetail/worksdetail_image1.jpg" width="2160" height="1510" alt="News" />
-      </figure class="workDetail_image_contents">
+      </figure>
       <figure class="workDetail_image_contents">
         <img src="/src/images/worksdetail/worksdetail_image2.jpg" width="2160" height="2358" alt="News" />
       </figure>
@@ -45,6 +42,6 @@
       Back
     </a>
   </div>
+  <%= require('html-loader!../common/footer.html') %>
 </body>
-<%= require('html-loader!../common/footer.html') %>
 </html>

@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <title>Document</title>
-    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <%= require('html-loader!./common/head.html') %>
+  <title>Lisq's portfolio</title>
 </head>
 <body>
   <%= require('html-loader!./common/header.html') %>
   <main class="main">
     <div class="main_wrap">
-      <p class="main_title"><img src="/src/images/about/about_title.png" width="616" height="229" alt="My Works" /></p>
+      <h1 class="main_title"><img src="/src/images/about/about_title.png" width="616" height="229" alt="My Works" /></h1>
       <div class  ="main_contents">
         <a href="./Works/indexDetail.html" class="main_visual">
           <img src="/src/images/about/about_main.png" width="1575" height="721" alt="" />

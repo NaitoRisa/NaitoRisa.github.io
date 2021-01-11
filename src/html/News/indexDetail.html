@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-  <title>Document</title>
-  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <%= require('html-loader!../common/head.html') %>
+  <title>NewsDetail | Lisq's portfolio</title>
 </head>
 <body>
   <%= require('html-loader!../common/header.html') %>
   <main class="newsDetail">
     <div class="newsDetail_wrap">
       <h1 class="newsDetail_title">
-        <p class="newsDetail_title_text">
-          <img src="/src/images/news/news_title.png" width="616" height="229" alt="News" />
-        </p>
+        <img src="/src/images/news/news_title.png" width="616" height="229" alt="News" />
       </h1>
       <div class="newsDetail_detail">
         <div class="newsDetail_detail_contents">
@@ -33,6 +28,6 @@
       </div>
     </div>
   </main>
+  <%= require('html-loader!../common/footer.html') %>
 </body>
-<%= require('html-loader!../common/footer.html') %>
 </html>
