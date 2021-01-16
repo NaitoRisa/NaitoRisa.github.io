@@ -79,8 +79,8 @@ module.exports = {
       filename: 'News/index.html',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src' , 'html', 'News', 'indexDetail.html'),
-      filename: 'News/indexDetail.html',
+      template: path.resolve(__dirname, 'src' , 'html', 'News', 'detail.html'),
+      filename: 'News/detail.html',
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src' , 'html', 'Profile', 'index.html'),
@@ -95,8 +95,8 @@ module.exports = {
       filename: 'Works/index.html',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src' , 'html', 'Works', 'indexDetail.html'),
-      filename: 'Works/indexDetail.html',
+      template: path.resolve(__dirname, 'src' , 'html', 'Works', 'detail.html'),
+      filename: 'Works/detail.html',
     }),
   ]
 };
