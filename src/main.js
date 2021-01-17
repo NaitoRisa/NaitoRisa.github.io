@@ -28,4 +28,6 @@ import './images/news/image_gray.jpg';
 import './images/links/links_title.png';
 import './images/links/links_image_1.jpg';
 import './images/links/links_image_2.jpg';
+// commonページ画像
+import './images/common/profile_portfolio.png';
 
