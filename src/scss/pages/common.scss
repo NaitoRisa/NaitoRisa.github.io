@@ -1,9 +1,11 @@
 .header{
-  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  
   &_wrap{
-    width: 1500px;
+    width: 1600px;
     margin: auto;
   }
+
   &_all{
     display: flex;
     padding: 30px 0;
@@ -30,11 +32,11 @@
 }
 
 .footer{
-  background-color: $footerColor;
+  background-color: $gray400;
   padding: 20px;
 
   &_copy{
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
     font-size: 1.2rem;
     color: $text200;

@@ -16,7 +16,6 @@
   $white: #FDFDFD;
   $error: red;
   $underline: #ff0;
-  $footerColor: #F8F8F8;
 
   /* テキストカラー(若い番号から使用頻度高) */
   $text200: #222; //本文 一番よく使う色
@@ -40,7 +39,7 @@
 $fontSizeBase: 1.6rem;
 
 //font
-$fontFamilyBase: noto-sans-cjk-jp, sans-serif;
+$fontFamilyBase: "Noto Sans JP" sans-serif;
 $fontFamilyEng200: din-condensed, sans-serif;
 $fontFamilyEng100: mina, serif;
 
