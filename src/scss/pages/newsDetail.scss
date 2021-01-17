@@ -5,7 +5,7 @@
 
       &_wrap{
         position: relative;
-        width: 980px;
+        width: $md;
         margin: auto;
       }
     
@@ -21,7 +21,7 @@
       }
   
       &_detail{
-        width: 980px;
+        width: $md;
         padding: 220px 0 100px;
   
         &_contents{

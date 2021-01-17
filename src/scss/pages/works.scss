@@ -2,7 +2,7 @@
 
   &_wrap{
     position: relative;
-    width: 980px;
+    width: $md;
     margin: auto;
   }
 
@@ -21,7 +21,7 @@
   &_detail{
     display: flex;
     flex-wrap: wrap;
-    width: 980px;
+    width: $md;
     margin: auto;
     padding: 180px 0 100px;
 

@@ -5,14 +5,13 @@
   
       &_wrap{
         position: relative;
-        width: 980px;
+        width: $md;
         margin: auto;
       }
     
       &_title{
-        padding-top: 50px;
         position: absolute;
-        top: 10px;
+        top: 60px;
 
         >img{
           width: 40%;
@@ -21,12 +20,16 @@
       }
 
       &_id{
-        line-height: 30px;
+        line-height: 2; //2行分;
       }
 
       &_name{
         margin-bottom: 20px;
-        line-height: 25px;
+        line-height: 1.5; //３文字分;
+
+        >small{
+          font-size: 1.5rem;
+        }
       }
 
       &_image{
@@ -34,14 +37,14 @@
       }
     
       &_detail{
-        width: 980px;
+        width: $md;
         padding: 220px 0 100px;
   
         &_contents{
           display: flex;
           flex-direction: column;
           background-color: $gray400;
-          line-height: 50px;
+          line-height: 3;
           padding: 30px 50px;
           margin-top: 20px;
         }
