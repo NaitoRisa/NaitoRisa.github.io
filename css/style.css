@@ -1,0 +1,839 @@
+@charset "UTF-8";
+/*---------------------------------------------------------------------------------------------------------------------
+
+----------------------------------
+Constitution
+----------------------------------
+1. Import
+2. Mixin & Common
+3. Padding / Margin
+4.library
+---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------
+	1.Import
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------
+	1. Color
+---------------------------------------------------------------------------------------------------------------------*/
+/*	1.1 Main
+---------------------------------------------------------------------------------------------------------------------*/
+/* ベースカラー */
+/* テキストカラー(若い番号から使用頻度高) */
+/* リンクカラー(若い番号から使用頻度高) */
+/* 無彩色(若い番号から使用頻度高) */
+/*	1.2 Font
+---------------------------------------------------------------------------------------------------------------------*/
+/*	1.3 Bg
+---------------------------------------------------------------------------------------------------------------------*/
+/* 無彩色(若い番号から使用頻度高) */
+/*---------------------------------------------------------------------------------------------------------------------
+	preset
+---------------------------------------------------------------------------------------------------------------------*/
+/*------------
+ レスポンシブの時のルール
+ ▼ブレイクポイントのルール▼
+ モバイルファーストとして設計
+ *〜479px：SP縦
+ *480px〜：SP横
+ *750px〜tab
+ *960px〜PC(小）
+ *1140px〜PC（大）
+------------*/
+/*!
+ * Bootstrap Reboot v4.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors.
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
+* *::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* -> 10px; */
+}
+
+html.wf-active {
+  visibility: visible;
+}
+
+body {
+  margin: 0;
+  color: #2f0075;
+  text-align: left;
+  background-color: #FDFDFD;
+  line-height: 2;
+  font-weight: 400;
+  font-size: 1.6remrem;
+  font-family: "Noto Sans JP" sans-serif;
+  font-style: normal;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-feature-settings: "palt" 1;
+  letter-spacing: 0.01em;
+}
+
+@media all and (-ms-high-contrast: none) {
+  *::-ms-backdrop,
+.tk-dnp-shuei-mgothic-std {
+    font-family: "Meiryo", sans-serif !important;
+  }
+}
+@-ms-viewport {
+  width: device-width;
+}
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  list-style-type: none;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+dfn {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+a {
+  color: #2f0075;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #2f0075;
+  text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover,
+a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+figure img {
+  width: 100%;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  text-align: inherit;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border-radius: 0;
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline: none;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=date],
+input[type=time],
+input[type=datetime-local],
+input[type=month] {
+  -webkit-appearance: listbox;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  vertical-align: baseline;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  max-width: 100%;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+output {
+  display: inline-block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+.main {
+  color: #222;
+  padding-bottom: 100px;
+  margin: auto;
+}
+.main_wrap {
+  position: relative;
+  width: 1600px;
+  margin: auto;
+}
+.main_contents {
+  position: relative;
+  width: 1200px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-top: 180px;
+}
+.main_contents::after {
+  background-image: url(/assets/images/src/images/about/about_copy.png);
+}
+.main_sub {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+.main_sub_list {
+  padding-top: 10px;
+}
+.main_sub_list > a > img {
+  width: 100%;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main_sub_list:nth-of-type(1) {
+  width: 30%;
+}
+.main_sub_list:nth-of-type(2) {
+  width: 70%;
+}
+.main_sub_list:nth-of-type(3) {
+  width: 65%;
+}
+.main_sub_list:nth-of-type(4) {
+  width: 35%;
+}
+.main_visual {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main_visual > a > img {
+  width: 100%;
+  height: auto;
+}
+.main_title {
+  text-align: left;
+  padding-top: 25px;
+  position: absolute;
+  top: 10px;
+}
+.main_title > img {
+  width: 400px;
+  height: auto;
+}
+
+.instagram {
+  display: block;
+  text-align: left;
+  width: 68px;
+  height: auto;
+}
+
+.footer_main {
+  transform: rotate(90deg);
+  display: inline-block;
+  position: absolute;
+  bottom: 30%;
+  right: -21%;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.footer_main::before {
+  position: absolute;
+  background-color: #222;
+  width: 100px;
+  height: 1px;
+  content: "";
+  top: 14px;
+  left: -110px;
+}
+
+.header {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.header_wrap {
+  width: 1600px;
+  margin: auto;
+}
+.header_all {
+  display: flex;
+  padding: 30px 0;
+}
+.header_left {
+  padding-left: 20px;
+}
+.header_right {
+  margin-left: auto;
+  padding-right: 20px;
+  display: flex;
+}
+.header_right > li > a {
+  padding-right: 25px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.footer {
+  background-color: #F8F8F8;
+  padding: 20px;
+}
+.footer_copy {
+  margin: auto;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.links {
+  color: #222;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.links_wrap {
+  position: relative;
+  width: 980px;
+  margin: auto;
+}
+.links_title {
+  padding-top: 50px;
+  position: absolute;
+  top: 10px;
+}
+.links_title > img {
+  width: 40%;
+  height: auto;
+}
+.links_id {
+  line-height: 30px;
+}
+.links_name {
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+.links_image {
+  padding-top: 25px;
+}
+.links_detail {
+  width: 980px;
+  padding: 220px 0 100px;
+}
+.links_detail_contents {
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8F8;
+  line-height: 50px;
+  padding: 30px 50px;
+  margin-top: 20px;
+}
+
+.news {
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.news_wrap {
+  position: relative;
+  width: 980px;
+  margin: auto;
+}
+.news_title {
+  padding-top: 50px;
+  position: absolute;
+  top: 10px;
+}
+.news_title > img {
+  width: 40%;
+  height: auto;
+}
+.news_detail {
+  width: 980px;
+  padding: 250px 0 100px;
+}
+.news_detail_contents {
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8F8;
+  line-height: 50px;
+  padding: 30px 50px;
+}
+.news_detail_link {
+  color: #222;
+}
+
+.newsDetail {
+  color: #222;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+.newsDetail_wrap {
+  position: relative;
+  width: 980px;
+  margin: auto;
+}
+.newsDetail_title {
+  padding-top: 50px;
+  position: absolute;
+  top: 10px;
+}
+.newsDetail_title > img {
+  width: 40%;
+  height: auto;
+}
+.newsDetail_detail {
+  width: 980px;
+  padding: 220px 0 100px;
+}
+.newsDetail_detail_contents {
+  display: flex;
+  flex-direction: column;
+  line-height: 50px;
+  padding: 30px 50px;
+}
+.newsDetail_detail_link {
+  color: #222;
+}
+.newsDetail_detail_text {
+  padding-top: 15px;
+  line-height: 30px;
+}
+
+.profile {
+  margin: auto;
+  text-align: center;
+  padding: 100px 180px;
+  color: #222;
+  font-size: 1.6rem;
+  letter-spacing: 1.4px;
+}
+.profile_photo > img {
+  width: 350px;
+  height: auto;
+}
+.profile_box {
+  margin-left: 60px;
+}
+.profile_box_name {
+  font-weight: bold;
+  font-size: 3rem;
+}
+.profile_box_comment {
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+}
+.profile_career {
+  padding-left: 30px;
+  display: inline-block;
+}
+.profile_career_contents {
+  display: flex;
+  margin-bottom: 15px;
+}
+.profile_career_contents.date {
+  padding-right: 30px;
+}
+
+.works_wrap {
+  position: relative;
+  width: 980px;
+  margin: auto;
+}
+.works_title {
+  padding-top: 50px;
+  position: absolute;
+  top: 10px;
+}
+.works_title > img {
+  width: 40%;
+  height: auto;
+}
+.works_detail {
+  display: flex;
+  flex-wrap: wrap;
+  width: 980px;
+  margin: auto;
+  padding: 180px 0 100px;
+}
+.works_detail_visual {
+  display: block;
+  padding: 0 30px 30px 0;
+}
+.works_detail_visual > a > img {
+  width: 280px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.workDetail_wrap {
+  width: 980px;
+  padding: 120px 0 100px;
+  margin: auto;
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.workDetail_detail {
+  background-color: #F8F8F8;
+  padding: 30px 50px;
+  text-align: left;
+}
+.workDetail_detail_title {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.4;
+  font-size: 1.6rem;
+}
+.workDetail_detail_contents {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+}
+.workDetail_detail_box {
+  width: 60%;
+}
+.workDetail_detail_boxText {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+.workDetail_detail_link {
+  color: #222;
+}
+.workDetail_image {
+  padding-bottom: 20px;
+}
+.workDetail_image_contents {
+  text-align: center;
+  padding-top: 30px;
+  margin: 0;
+}
+.workDetail_image_contents > img {
+  width: 70%;
+  height: auto;
+}
+.workDetail_link {
+  margin-top: 20px;
+}
+.workDetail_link > a {
+  margin-top: 20px;
+}
+
+/*	2.Mixin & Common
+---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------
+	1. Module
+---------------------------------------------------------------------------------------------------------------------*/
+.shadow, .shadowButton {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/*---------------------------------------------------------------------------------------------------------------------
+	2. Mixin
+---------------------------------------------------------------------------------------------------------------------*/
+/*	1.1 テキスト系
+---------------------------------------------------------------------------------------------------------------------*/
+/*	1.2 背景系
+---------------------------------------------------------------------------------------------------------------------*/
+/*	1.3 アイコン・図形生成系
+---------------------------------------------------------------------------------------------------------------------*/
+/*	3.Padding / Margin
+---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------
+	1. Padding / Margin
+---------------------------------------------------------------------------------------------------------------------*/
+/*	1.1 Spacing
+---------------------------------------------------------------------------------------------------------------------*/
+.wrapper__large {
+  padding: 0 24px;
+}
+
+@media (min-width: 1000px) {
+  .wrapper__large {
+    padding: 0 48px;
+  }
+}
+.maxWidth {
+  max-width: 1340px;
+}
+
+/*	1.2 Margin
+---------------------------------------------------------------------------------------------------------------------*/
+/*	4.base
+---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
