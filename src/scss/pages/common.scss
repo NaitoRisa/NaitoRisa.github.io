@@ -1,8 +1,14 @@
-.nav{
+.header{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  
+  &_wrap{
+    width: 1600px;
+    margin: auto;
+  }
+
   &_all{
     display: flex;
     padding: 30px 0;
-    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
   }
 
   &_left{
@@ -12,12 +18,28 @@
   &_right{
     margin-left: auto;
     padding-right: 20px;
+    display: flex;
 
-    >a{
-      padding-right: 25px;
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: $text200;
+    >li{
+      >a{
+        padding-right: 25px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: $text200;
+      }
     }
+  }
+}
+
+.footer{
+  background-color: $gray400;
+  padding: 20px;
+
+  &_copy{
+    margin: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: $text200;
+    font-weight: bold;
   }
 }

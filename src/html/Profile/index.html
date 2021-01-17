@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <title>Document</title>
-    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <%= require('html-loader!../common/head.html') %>
+  <title>Profile | Lisq's portfolio</title>
 </head>
 <body>
   <%= require('html-loader!../common/header.html') %>
-  <section class="main">
-    <p class="main_title"><img src="/src/images/about/about_title.png" width="616" height="229" alt="My Works" /></p>
-    <div class="main_contents">
-      <a href="./" class="main_visual">
-        <img src="/src/images/about/about_main.png" width="1575" height="721" alt="" />
-      </a>
-      <div class="main_sub">
-        <a href="./" class="">
-          <img src="/src/images/about/about_card.png" width="504" height="480" alt="" />
-        </a>
-        <a href="./" class="">
-          <img src="/src/images/about/about_sauna.png" width="1041" height="479" alt="" />
-        </a>
-      </div>
-      <div class="main_sub">
-        <a href="./" class="">
-          <img src="/src/images/about/about_onigiri.png" width="1041" height="481" alt="" />
-        </a>
-        <a href="./" class="">
-          <img src="/src/images/about/about_goodmorning.png" width="505" height="481" alt="" />
-        </a>
-      </div>
+  <div class="profile">
+    <figure class="profile_photo">
+      <img src="/src/images/profile/profile_main.png" width="300" height="300" alt="" />
+    </figure>
+    <div class="profile_box">
+      <p class="profile_box_name">Naito Lisa</p>
+      <p class="profile_box_comment">一眼レフとサウナがすきです♨️</p>
     </div>
-    <a href="./" class="instagram">
-      <img src="/src/images/about/about_instagram.png" width="68" height="68.5" alt="" />
-    </a>
-  </section>
+    <div class="profile_career">
+      <dl class="profile_career_contents">
+        <dt class="profile_career_contents date">2020.12.XX</dt>
+        <dd class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</dd>
+      </dl>
+      <dl class="profile_career_contents">
+        <dt class="profile_career_contents date">2020.12.XX</dt>
+        <dd class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</dd>
+      </dl>
+      <dl class="profile_career_contents">
+        <dt class="profile_career_contents date">2020.12.XX</dt>
+        <dd class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</dd>
+      </dl>
+      <dl class="profile_career_contents">
+        <dt class="profile_career_contents date">2020.12.XX</dt>
+        <dd class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</dd>
+      </dl>
+      <dl class="profile_career_contents">
+        <dt class="profile_career_contents date">2020.12.XX</dt>
+        <dd class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</dd>
+      </dl>
+      <dl class="profile_career_contents">
+        <dt class="profile_career_contents date">2020.12.XX</dt>
+        <dd class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</dd>
+      </dl>
+      <dl class="profile_career_contents">
+        <dt class="profile_career_contents date">2020.12.XX</dt>
+        <dd class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</dd>
+      </dl>
+      <dl class="profile_career_contents">
+        <dt class="profile_career_contents date">2020.12.XX</dt>
+        <dd class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</dd>
+      </dl>
+      <dl class="profile_career_contents">
+        <dt class="profile_career_contents date">2020.12.XX</dt>
+        <dd class="profile_career_contents comment">これはダミーテキストですこれはダミーテキストですこれはダミーテキストです</dd>
+      </dl>
+    </div>
+  </div>
+  <%= require('html-loader!../common/footer.html') %>
 </body>
 </html>

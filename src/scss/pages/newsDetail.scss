@@ -1,0 +1,43 @@
+.newsDetail{
+    color: $text200;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+
+      &_wrap{
+        position: relative;
+        width: 980px;
+        margin: auto;
+      }
+    
+      &_title{
+        padding-top: 50px;
+        position: absolute;
+        top: 10px;
+
+        >img{
+          width: 40%;
+          height: auto;
+        }
+      }
+  
+      &_detail{
+        width: 980px;
+        padding: 220px 0 100px;
+  
+        &_contents{
+          display: flex;
+          flex-direction: column;
+          line-height: 50px;
+          padding: 30px 50px;
+        }
+  
+        &_link{
+          color: $text200;
+        }
+
+        &_text{
+          padding-top: 15px;
+          line-height: 30px;
+        }
+      }
+    }

@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang='ja'>
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <title>Document</title>
-    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <%= require('html-loader!./common/head.html') %>
+  <title>Lisq's portfolio</title>
 </head>
 <body>
   <%= require('html-loader!./common/header.html') %>
-  <section class="main">
-    <p class="main_title"><img src="/src/images/about/about_title.png" width="616" height="229" alt="My Works" /></p>
-    <div class="main_contents">
-      <a href="./" class="main_visual">
-        <img src="/src/images/about/about_main.png" width="1575" height="721" alt="" />
-      </a>
-      <div class="main_sub">
-        <a href="./" class="">
-          <img src="/src/images/about/about_card.png" width="504" height="480" alt="" />
-        </a>
-        <a href="./" class="">
-          <img src="/src/images/about/about_sauna.png" width="1041" height="479" alt="" />
+  <main class="main">
+    <div class="main_wrap">
+      <h1 class="main_title"><img src="/src/images/about/about_title.png" width="616" height="229" alt="My Works" /></h1>
+      <div class="main_contents">
+        <div class="main_visual">
+          <a href="../Works/detail.html">
+            <img src="/src/images/about/about_main.png" width="1575" height="721" alt="" />
+          </a>
+         </div>
+        <ul class="main_sub">
+          <li class="main_sub_list">
+            <a href="../Works/detail.html">
+            <img src="/src/images/about/about_card.png" width="504" height="480" alt="" />
+            </a>
+          </li>
+          <li class="main_sub_list">
+            <a href="../Works/detail.html">
+              <img src="/src/images/about/about_sauna.png" width="1041" height="479" alt="" />
+            </a>
+          </li>
+          <li class="main_sub_list">
+            <a href="../Works/detail.html">
+              <img src="/src/images/about/about_onigiri.png" width="1041" height="481" alt="" />
+            </a>
+          </li>
+          <li class="main_sub_list">
+            <a href="../Works/detail.html">
+              <img src="/src/images/about/about_goodmorning.png" width="505" height="481" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div class="footer_main">Copyright © 2020  Naito Lisq Portfolio All Rights Reserved.</div>
+        <a href="https://www.instagram.com/rq_gram/" class="instagram">
+          <img src="/src/images/about/about_instagram.png" width="68" height="68.5" alt="" />
         </a>
       </div>
-      <div class="main_sub">
-        <a href="./" class="">
-          <img src="/src/images/about/about_onigiri.png" width="1041" height="481" alt="" />
-        </a>
-        <a href="./" class="">
-          <img src="/src/images/about/about_goodmorning.png" width="505" height="481" alt="" />
-        </a>
-      </div>
-      <a href="./" class="instagram">
-        <img src="/src/images/about/about_instagram.png" width="68" height="68.5" alt="" />
-      </a>
     </div>
-  </section>
+  </main>
 </body>
 </html>

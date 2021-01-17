@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+  <%= require('html-loader!../common/head.html') %>
+  <title>WorksDetail | Lisq's portfolio</title>
+</head>
+<body>
+  <%= require('html-loader!../common/header.html') %>
+  <div class="workDetail_wrap">
+    <article class="workDetail_detail">
+      <div class="workDetail_detail_contents">
+        <h1 class="workDetail_detail_title">
+          <small>Graphic Design</small>
+          タイトルタイトルタイトル
+        </h1>
+        <div class="workDetail_detail_box">
+          <p class="workDetail_detail_boxText">
+            作品の説明が入ります作品の説明が入ります作品の説明が入ります
+            作品の説明が入ります作品の説明が入ります作品の説明が入ります
+          </p>
+          <p class="workDetail_detail_boxText">
+            作品の説明が入ります作品の説明が入ります作品の説明が入ります
+            作品の説明が入ります作品の説明が入ります作品の説明が入ります
+          </p>
+        </div>
+      </div>
+      <dl class="workDetail_detail_season">
+        <dt class="workDetail_detail_season years">2018</dt>
+        <dd class="workDetail_detail_season">CL：XXXXXXX</dd>
+      </dl>
+      <dl class="workDetail_detail_season cl">
+        <dt>作業時間：</dt>
+        <dd>XXXXXXXXX</dd>
+      </dl>
+    </article>
+    <div class="workDetail_image">
+      <figure class="workDetail_image_contents">
+        <img src="/src/images/worksdetail/worksdetail_image1.jpg" width="686" height="480" alt="作品名" />
+      </figure>
+      <figure class="workDetail_image_contents">
+        <img src="/src/images/worksdetail/worksdetail_image2.jpg" width="686" height="480" alt="作品名" />
+      </figure>
+      <figure class="workDetail_image_contents">
+        <img src="/src/images/worksdetail/worksdetail_image3.jpg" width="686" height="480" alt="作品名" />
+      </figure>
+    </div>
+    <a href="./" class="workDetail_link">
+      Back
+    </a>
+  </div>
+  <%= require('html-loader!../common/footer.html') %>
+</body>
+</html>
