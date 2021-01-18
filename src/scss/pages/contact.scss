@@ -1,0 +1,40 @@
+.contact{
+    color: $text200;
+    font-size: 1.5rem;
+    font-weight: bold;
+  
+      &_wrap{
+        position: relative;
+        width: $md;
+        margin: auto;
+      }
+    
+      &_title{
+        padding-top: 50px;
+        position: absolute;
+        top: 10px;
+  
+        >img{
+          width: 40%;
+          height: auto;
+        }
+      }
+  
+      &_detail{
+        width: $md;
+        padding: 120px 0 100px;
+  
+        &_contents{
+          display: flex;
+          flex-direction: column;
+          background-color: $gray400;
+          line-height: 50px;
+          padding: 30px 50px;
+          text-align: center;
+        }
+  
+        &_link{
+          color: $text200;
+        }
+      }
+    }

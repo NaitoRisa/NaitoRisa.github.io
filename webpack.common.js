@@ -98,5 +98,9 @@ module.exports = {
       template: path.resolve(__dirname, 'src' , 'html', 'Works', 'detail.html'),
       filename: 'Works/detail.html',
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src' , 'html', 'Contact', 'index.html'),
+      filename: 'Contact/index.html',
+    }),
   ]
 };
