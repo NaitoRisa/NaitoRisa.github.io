@@ -447,9 +447,6 @@ template {
   text-align: center;
   padding-top: 180px;
 }
-.main_contents::after {
-  background-image: url(/assets/images/src/images/about/about_copy.png);
-}
 .main_sub {
   display: flex;
   flex-wrap: wrap;
@@ -490,6 +487,7 @@ template {
   padding-top: 25px;
   position: absolute;
   top: 10px;
+  left: 0;
 }
 .main_title > img {
   width: 400px;
@@ -534,12 +532,17 @@ template {
   padding: 30px 0;
 }
 .header_left {
+  display: block;
   padding-left: 20px;
+  width: 300px;
+  height: auto;
 }
 .header_right {
   margin-left: auto;
-  padding-right: 20px;
+  margin-bottom: 0;
   display: flex;
+  align-items: center;
+  font-size: 1.6rem;
 }
 .header_right > li > a {
   padding-right: 25px;
@@ -571,20 +574,22 @@ template {
   margin: auto;
 }
 .links_title {
-  padding-top: 50px;
   position: absolute;
-  top: 10px;
+  top: 60px;
 }
 .links_title > img {
   width: 40%;
   height: auto;
 }
 .links_id {
-  line-height: 30px;
+  line-height: 2;
 }
 .links_name {
   margin-bottom: 20px;
-  line-height: 25px;
+  line-height: 1.5;
+}
+.links_name > small {
+  font-size: 1.5rem;
 }
 .links_image {
   padding-top: 25px;
@@ -597,7 +602,7 @@ template {
   display: flex;
   flex-direction: column;
   background-color: #F8F8F8;
-  line-height: 50px;
+  line-height: 3;
   padding: 30px 50px;
   margin-top: 20px;
 }
@@ -629,11 +634,14 @@ template {
   display: flex;
   flex-direction: column;
   background-color: #F8F8F8;
-  line-height: 50px;
+  line-height: 3.4;
   padding: 30px 50px;
 }
 .news_detail_link {
   color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .newsDetail {
@@ -671,6 +679,41 @@ template {
 .newsDetail_detail_text {
   padding-top: 15px;
   line-height: 30px;
+}
+
+.contact {
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.contact_wrap {
+  position: relative;
+  width: 980px;
+  margin: auto;
+}
+.contact_title {
+  padding-top: 50px;
+  position: absolute;
+  top: 10px;
+}
+.contact_title > img {
+  width: 40%;
+  height: auto;
+}
+.contact_detail {
+  width: 980px;
+  padding: 120px 0 100px;
+}
+.contact_detail_contents {
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8F8;
+  line-height: 50px;
+  padding: 30px 50px;
+  text-align: center;
+}
+.contact_detail_link {
+  color: #222;
 }
 
 .profile {
@@ -755,6 +798,10 @@ template {
   text-align: left;
 }
 .workDetail_detail_title {
+  width: 440px;
+  margin-right: 40px;
+}
+.workDetail_detail_title > h1 {
   display: flex;
   flex-direction: column;
   line-height: 2.4;
@@ -823,7 +870,7 @@ template {
   padding: 0 24px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 980px) {
   .wrapper__large {
     padding: 0 48px;
   }
