@@ -5,7 +5,7 @@
 
     &_wrap{
       position: relative;
-      width: 980px;
+      width: $md;
       margin: auto;
     }
   
@@ -21,19 +21,22 @@
     }
 
     &_detail{
-      width: 980px;
+      width: $md;
       padding: 250px 0 100px;
 
       &_contents{
         display: flex;
         flex-direction: column;
         background-color: $gray400;
-        line-height: 50px;
+        line-height: 3.4;
         padding: 30px 50px;
       }
 
       &_link{
         color: $text200;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }

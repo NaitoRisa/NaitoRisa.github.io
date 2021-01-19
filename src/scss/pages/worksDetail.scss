@@ -1,7 +1,7 @@
 .workDetail{
 
   &_wrap{
-    width: 980px;
+    width: $md;
     padding: 120px 0 100px;
     margin: auto;
     color: $text200;
@@ -16,10 +16,15 @@
     text-align: left;
 
     &_title{
-      display: flex;
-      flex-direction: column;
-      line-height: 2.4;
-      font-size: 1.6rem;
+      width: 440px;
+      margin-right: 40px;
+
+      >h1{
+        display: flex;
+        flex-direction: column;
+        line-height: 2.4;
+        font-size: 1.6rem;
+      }
     }
 
     &_contents{
