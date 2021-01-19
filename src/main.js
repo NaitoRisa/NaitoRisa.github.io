@@ -1,6 +1,4 @@
-// scssを追加する場合はここに書いていく
 import './scss/style.scss';
-import './scss/pages/contact.scss';
 
 // TOPページ画像
 import './images/about/about_title.png';
